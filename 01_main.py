@@ -84,5 +84,20 @@ if (enforce):
     print(f"Your Password is : {final_password}")
     print("The password is copied in your clipboard automatically ")
 else:
+    random_chars = []
+    for i in range(length):
+        random_chars.append(random.choice(char_pool))
+    # print(random_chars)
+
+    #shuffling the list
+    random.shuffle(random.chars)
+    # print(random_chars)
     
-    
+    # Converting List into string
+    final_password = "".join(random_chars)
+    # print(final_password)
+
+    # copying the password into your clipboard
+    pyperclip.copy(final_password)
+    print(f"Your Password is : {final_password}")
+    print("The password is copied in your clipboard automatically ")
