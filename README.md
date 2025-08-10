@@ -53,8 +53,8 @@ To get a local copy up and running, follow these simple steps.
 3.  **Navigate and Set Up Environment**
     ```sh
     cd advanced-random-password-generator
-    python -m venv v1
-    source v1/bin/activate  # On Windows use: v1\Scripts\activate
+    python -m venv venv
+    source venv/bin/activate  # On Windows use: v1\Scripts\activate
     ```
 
 4.  **Install Dependencies**
@@ -85,7 +85,7 @@ The program will launch a user-friendly interactive menu. Simply follow the on-s
 
 ## 📜 License
 
-Distributed under the MIT License. See [MIT LICENSE](LICENSE) for more information.
+Distributed under the MIT License. See [LICENSE.txt](LICENSE) for more information.
 
 ---
 
