@@ -34,7 +34,7 @@ This project started as a personal challenge to build a useful tool entirely fro
 
 ## 📷Demo
 
-![Random Password Generator demo](random-password-generator\demo\app_demo-ezgif.com-instagif.gif)
+![Random Password Generator demo](random-password-generator\demo\demo.gif)
 
 ---
 
