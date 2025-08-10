@@ -2,6 +2,8 @@
 import random
 import string
 import sys
+import csv
+import os
 import pyperclip
 
 
@@ -69,7 +71,7 @@ if (enforce):
     
     # Merging the both the lists
     password_char = guaranteed_char + random_chars
-    print(password_char)
+    # print(password_char)
 
 
     # Shuffling the list
@@ -83,6 +85,7 @@ if (enforce):
     pyperclip.copy(final_password)
     print(f"Your Password is : {final_password}")
     print("The password is copied in your clipboard automatically ")
+
 else:
     random_chars = []
     for i in range(length):
@@ -90,7 +93,7 @@ else:
     # print(random_chars)
 
     #shuffling the list
-    random.shuffle(random.chars)
+    random.shuffle(random_chars)
     # print(random_chars)
     
     # Converting List into string
@@ -101,3 +104,32 @@ else:
     pyperclip.copy(final_password)
     print(f"Your Password is : {final_password}")
     print("The password is copied in your clipboard automatically ")
+
+
+# Phase-5 --> Storing User Input for Future-Use
+opinion = str(input("\nDo you want to store the output for the Future Use? (Y/N): ")).strip().lower() in ['y', 'yes']
+
+if(opinion):
+    user_name = str(input("Enter Your name: "))
+    web_name = str(input("Enter the Name of the Website Or App, for which you are creating password:\n"))
+    
+    file_path = 'password.csv'
+
+    # Checking file already exists or not
+    file_exists = os.path.exists(file_path)
+
+    with open(file_path , 'a', newline='') as csvfile:
+        field_names = ['user_name', 'web_name', 'final_password']
+
+        writer = csv.DictWriter(csvfile, fieldnames=field_names)
+
+        # If the file is new(doesn't exist)
+        if not file_exists:
+            writer.writeheader()
+
+        # We are not writing the actual data row
+        writer.writerow({'user_name': user_name, 'web_name':web_name, 'final_password':final_password})
+    print(f"Password for {web_name} is sucessfully stored at {file_path}")
+else:
+    print("Ok, your password was not saved.")
+    print("\nThank you for using our password generator!")
