@@ -47,14 +47,14 @@ To get a local copy up and running, follow these simple steps.
 
 2.  **Clone the Repository**
     ```sh
-    git clone [https://github.com/MrHacker2006/advanced-random-password-generator.git](https://github.com/MrHacker2006/advanced-random-password-generator.git)
+    git clone https://github.com/MrHacker2006/advanced-random-password-generator.git
     ```
 
 3.  **Navigate and Set Up Environment**
     ```sh
     cd advanced-random-password-generator
-    python -m venv venv
-    source venv/bin/activate  # On Windows use: venv\Scripts\activate
+    python -m venv v1
+    source v1/bin/activate  # On Windows use: v1\Scripts\activate
     ```
 
 4.  **Install Dependencies**
@@ -74,11 +74,12 @@ The program will launch a user-friendly interactive menu. Simply follow the on-s
 ---
 
 ## 🛣️Roadmap 
-[ ] Develop a full-stack web application version of this tool.
 
-[ ] Add functionality to edit or delete existing password entries.
+- Develop a full-stack web application version of this tool.
 
-[ ] Implement a password strength analysis feature.
+- Add functionality to edit or delete existing password entries.
+
+- Implement a password strength analysis feature.
 
 ---
 
