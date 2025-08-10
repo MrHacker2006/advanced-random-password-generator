@@ -60,7 +60,7 @@ if (enforce):
     # print(guaranteed_char)
 
 
-     # finding lenght of the remaining password
+     # finding length of the remaining password
     random_chars = []
     required_length= length-len(guaranteed_char)
 
@@ -110,8 +110,8 @@ else:
 opinion = str(input("\nDo you want to store the output for the Future Use? (Y/N): ")).strip().lower() in ['y', 'yes']
 
 if(opinion):
-    login_name = str(input("Enter Your name: "))
-    web_name = str(input("Enter the Name of the Website Or App, for which you are creating password:\n"))
+    login_name = str(input("Enter Your name: ")).strip().lower()
+    service_name = str(input("Enter the Name of the Website Or App, for which you are creating password:\n")).strip().lower()
     
     file_path = 'password.csv'
 
@@ -119,8 +119,8 @@ if(opinion):
     file_exists = os.path.exists(file_path)
 
     with open(file_path , 'a', newline='') as csvfile:
-        column_names = ['user_name', 'web_name', 'Password']
-
+        column_names = ['user_name', 'web_name', 'password']
+ 
         writer = csv.DictWriter(csvfile, fieldnames=column_names)
 
         # If the file is new(doesn't exist)
@@ -128,8 +128,31 @@ if(opinion):
             writer.writeheader() # This will write column names (only once), if the file is new, if the file is old it get skipped automatically.
 
         # We are writing the actual data row
-        writer.writerow({'user_name': login_name, 'web_name':web_name, 'Password':final_password})
-    print(f"Password for {web_name} is sucessfully stored at {file_path}")
+        writer.writerow({'user_name': login_name, 'web_name':service_name, 'password':final_password})
+    print(f"Password for {service_name} is sucessfully stored at {file_path}")
 else:
     print("Ok, your password was not saved.")
     print("\nThank you for using our password generator!")
+
+
+# Phase-6--> Reading the Password of the user(already stored)
+print("Reading Part started:\n ")
+login_name = str(input("Enter the name of the user, which you have entered earlier: ")).strip().lower()
+service_name = str(input("Enter the name of website or app name , for which you have generated password earlier: ")).strip().lower()
+
+if not file_exists:
+    print("OOPs your data file does not exists, maybe it get deleted!")
+else:
+    with open(file_path, 'r', newline='') as csvfile:
+
+        reader = csv.DictReader(csvfile, fieldnames=column_names)
+        
+        password_found = False
+        
+        for row in reader:
+            if row['user_name']==login_name and row['web_name']==service_name:
+                print(f"Your Password is Found\n{row['password']}")
+                password_found = True
+                break
+        if not password_found:
+            print("We have tried our best to find your password, but we are not able to find that!")
