@@ -34,7 +34,57 @@ This project started as a personal challenge to build a useful tool entirely fro
 
 ## 📷Demo
 
-Demo Link--> ![Random Password Generator demo](demo/demo.gif)
+![Random Password Generator demo](demo/demo.gif)
+
+---
+
+## Installation
+
+To get a local copy up and running, follow these simple steps.
+
+1.  **Prerequisites**
+    * Python 3.10 or higher
+
+2.  **Clone the Repository**
+    ```sh
+    git clone [https://github.com/MrHacker2006/advanced-random-password-generator.git](https://github.com/MrHacker2006/advanced-random-password-generator.git)
+    ```
+
+3.  **Navigate and Set Up Environment**
+    ```sh
+    cd advanced-random-password-generator
+    python -m venv venv
+    source venv/bin/activate  # On Windows use: venv\Scripts\activate
+    ```
+
+4.  **Install Dependencies**
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+## Usage
+
+Run the application from your terminal after installation:
+
+```sh
+python 01_main.py
+```
+The program will launch a user-friendly interactive menu. Simply follow the on-screen prompts to either generate a new password or retrieve a previously saved one.
+
+---
+
+## 🛣️Roadmap 
+[ ] Develop a full-stack web application version of this tool.
+
+[ ] Add functionality to edit or delete existing password entries.
+
+[ ] Implement a password strength analysis feature.
+
+---
+
+## 📜 License
+
+Distributed under the MIT License. See [MIT LICENSE](LICENSE) for more information.
 
 ---
 
