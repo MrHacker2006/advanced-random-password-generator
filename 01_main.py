@@ -156,7 +156,7 @@ def retrieval():
             
             for row in reader:
                 if row['user_name']==login_name and row['web_name']==service_name:
-                    print(f"Your Password is Found\n{row['password']}")
+                    print(f"Your Password is Founded sucessfully : \n{row['password']}")
                     password_found = True
                     break
             if not password_found:
