@@ -6,12 +6,10 @@ import csv
 import os
 import pyperclip
 
+# Phase-2 --> Taking Input from the user
 def generate_and_save_password():
- # Phase-2 --> Taking Input from the user
     while True:
         try:
-            
-
             length = int(input("Enter the length of the password(in integers) which you want to generate : "))
             print("What things you want to include in your password❓\n")
             include_numbers = str(input("Do you want to include Numbers ?(Y/N): ")).lower().strip() in ['y', 'yes']
@@ -135,6 +133,7 @@ def generate_and_save_password():
         print("Ok, your password was not saved.")
         print("\nThank you for using our password generator!")
 
+
 # Phase-6--> Reading the Password of the user(already stored)
 def retrieval():
     print("Reading Part started:\n ")
@@ -161,6 +160,7 @@ def retrieval():
                     break
             if not password_found:
                 print("We have tried our best to find your password, but we are not able to find that!")
+
 
 if __name__ == "__main__":
     print("\nWelcome to the Random Password Generator!\n")
