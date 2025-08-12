@@ -73,6 +73,12 @@ The program will launch a user-friendly interactive menu. Simply follow the on-s
 
 ---
 
+## 🧠 In-Depth Explanations
+
+For those who want a deeper dive into the project's architecture, code, and my thought process, I have written a series of detailed guides for each major feature. You can find them in the [explanations](explanations) folder within this repository.
+
+---
+
 ## 🛣️Roadmap 
 
 - Develop a full-stack web application version of this tool.

@@ -110,7 +110,7 @@ def generate_and_save_password():
 
     if(opinion):
         login_name = str(input("Enter Your name: ")).strip().lower()
-        service_name = str(input("Enter the Name of the Website Or App, for which you are creating password:\n")).strip().lower()
+        service_name = str(input("Enter the Name of the Website Or App, for which you are creating password: ")).strip().lower()
         
         file_path = 'password.csv'
 
