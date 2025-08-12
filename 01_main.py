@@ -12,10 +12,10 @@ def generate_and_save_password():
         try:
             length = int(input("Enter the length of the password(in integers) which you want to generate : "))
             print("What things you want to include in your password❓\n")
-            include_numbers = str(input("Do you want to include Numbers ?(Y/N): ")).lower().strip() in ['y', 'yes']
-            include_lowercase = str(input("Do you want to include Lowercase characters ?(Y/N): ")).lower().strip() in ['y', 'yes']
-            include_uppercase = str(input("Do you want to include Uppercase characters ?(Y/N): ")).lower().strip() in ['y', 'yes']
-            include_punctuations = str(input("Do you want to include Punctuations ?(Y/N): ")).lower().strip() in ['y', 'yes']
+            include_numbers = str(input("Do you want to include Numbers❓(Y/N): ")).lower().strip() in ['y', 'yes']
+            include_lowercase = str(input("Do you want to include Lowercase characters❓(Y/N): ")).lower().strip() in ['y', 'yes']
+            include_uppercase = str(input("Do you want to include Uppercase characters❓(Y/N): ")).lower().strip() in ['y', 'yes']
+            include_punctuations = str(input("Do you want to include Punctuations❓(Y/N): ")).lower().strip() in ['y', 'yes']
             break
         except ValueError:
             print("\nPlease Enter a valid integer!")
@@ -38,7 +38,7 @@ def generate_and_save_password():
 
 
     # Phase-4 Password Generation + Printing the password
-    resp = str(input("\nDo you want to include one character from each of your choice? (Y/N): ")).strip().lower()
+    resp = str(input("\nDo you want to include one character from each of your choice❓ (Y/N): ")).strip().lower()
 
     if resp not in ['y','yes', 'n', 'no']:
         print("Please Enter a Vaild Choice!")
@@ -106,7 +106,7 @@ def generate_and_save_password():
 
     # Phase-5 --> Storing User Input for Future-Use
 
-    opinion = str(input("\nDo you want to store the output for the Future Use? (Y/N): ")).strip().lower() in ['y', 'yes']
+    opinion = str(input("\nDo you want to store the output for the Future Use❓ (Y/N): ")).strip().lower() in ['y', 'yes']
 
     if(opinion):
         login_name = str(input("Enter Your name: ")).strip().lower()
@@ -136,7 +136,7 @@ def generate_and_save_password():
 
 # Phase-6--> Reading the Password of the user(already stored)
 def retrieval():
-    print("Reading Part started:\n ")
+    # print("Reading Part started:\n ")
     login_name = str(input("Enter the name of the user, which you have entered earlier: ")).strip().lower()
     service_name = str(input("Enter the name of website or app name , for which you have generated password earlier: ")).strip().lower()
    
